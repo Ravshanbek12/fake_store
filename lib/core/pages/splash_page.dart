@@ -1,10 +1,14 @@
 import 'package:fake_store/features/home/presentation/home_page.dart';
-import 'package:fake_store/features/login/presentation/login_screen.dart';
+import 'package:fake_store/features/main/presentation/main_screen.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../features/login/data/bloc/auth/authentication_bloc.dart';
+import '../../features/auth/data/bloc/auth/authentication_bloc.dart';
+import '../../features/auth/presentation/login_screen.dart';
+
+
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -21,7 +25,7 @@ class SplashScreen extends StatelessWidget {
             );
           } else {
             Navigator.of(context).pushAndRemoveUntil(
-              CupertinoPageRoute(builder: (_) => const App()),
+              CupertinoPageRoute(builder: (_) => const MainScreen()),
               (route) => false,
             );
           }
@@ -37,3 +41,5 @@ class SplashScreen extends StatelessWidget {
         },
       );
 }
+//mor_2314
+//83r5^_

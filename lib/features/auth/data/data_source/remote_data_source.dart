@@ -7,12 +7,14 @@ part 'remote_data_source.freezed.dart';
 abstract class AuthenticationRemoteDataSource {
   factory AuthenticationRemoteDataSource() =>
       _AuthenticationRemoteDataSourceImpl();
+
   Future<AuthenticatedUserModel> getUser(String username, String password);
 }
 
 class _AuthenticationRemoteDataSourceImpl
     implements AuthenticationRemoteDataSource {
   final dio = Dio(BaseOptions(baseUrl: 'https://fakestoreapi.com'));
+
   @override
   Future<AuthenticatedUserModel> getUser(
       String username, String password) async {
@@ -38,8 +40,8 @@ class _AuthenticationRemoteDataSourceImpl
 @freezed
 class AuthenticatedUserModel with _$AuthenticatedUserModel {
   const factory AuthenticatedUserModel({
-    @Default(0) int id,
-    @Default('') String email,
-    @Default('') String username,
+    int id,
+    String email,
+    String username,
   }) = _AuthenticatedUserModel;
 }

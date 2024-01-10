@@ -1,9 +1,10 @@
 import 'package:fake_store/core/either/either.dart';
 import 'package:fake_store/core/failure/failure.dart';
 import 'package:fake_store/core/usecase/usecase.dart';
-import 'package:fake_store/features/login/data/repository/auth.dart';
+
 
 import '../../data/bloc/auth/authentication_bloc.dart';
+import '../../data/repository/auth.dart';
 
 class GetUserUseCase
     implements UseCase<AuthenticatedUserEntity, (String, String)> {

@@ -1,4 +1,5 @@
 import 'package:fake_store/features/home/presentation/home_page.dart';
+import 'package:fake_store/features/main/presentation/main_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     password: passwordController.text,
                     onSuccess: () {
                       Navigator.of(context).pushAndRemoveUntil(
-                          CupertinoPageRoute(builder: (_) => const App()),
+                          CupertinoPageRoute(builder: (_) => const MainScreen()),
                           (route) => false);
                     },
                     onFailure: (errorMessage) {
@@ -59,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     password: passwordController.text,
                     onSuccess: () {
                       Navigator.of(context).pushAndRemoveUntil(
-                          CupertinoPageRoute(builder: (_) => const App()),
+                          CupertinoPageRoute(builder: (_) => const MainScreen()),
                           (route) => false);
                     },
                     onFailure: (errorMessage) {

@@ -1,10 +1,11 @@
 import 'package:fake_store/core/either/either.dart';
 import 'package:fake_store/core/exception/exception.dart';
 import 'package:fake_store/core/failure/failure.dart';
-import 'package:fake_store/features/login/data/data_source/remote_data_source.dart';
-import 'package:fake_store/features/login/domain/repository/auth.dart';
 
+
+import '../../domain/repository/auth.dart';
 import '../bloc/auth/authentication_bloc.dart';
+import '../data_source/remote_data_source.dart';
 
 class AuthenticationRepositoryImpl extends AuthenticationRepository {
   final dataSource = AuthenticationRemoteDataSource();

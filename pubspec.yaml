@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   freezed_annotation: any
+  shared_preferences: ^2.2.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -38,6 +39,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^5.4.0
   flutter_bloc: ^8.1.3
+  get_it: ^7.6.6
 
 dev_dependencies:
   flutter_test:

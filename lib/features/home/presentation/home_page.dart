@@ -7,20 +7,19 @@ import 'package:flutter/material.dart';
 
 import '../data/data_source/remote_data_source.dart';
 
-class App extends StatefulWidget {
-  const App({super.key});
+class ProductScreen extends StatefulWidget {
+  const ProductScreen({super.key});
 
   @override
-  State<App> createState() => _AppState();
+  State<ProductScreen> createState() => _ProductScreenState();
 }
 
-class _AppState extends State<App> {
+class _ProductScreenState extends State<ProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFAFAFA),
       appBar: AppBar(
-        title: const Text('FakeStore '),
       ),
       body: FutureBuilder(
         future: GetProductsUseCase(
